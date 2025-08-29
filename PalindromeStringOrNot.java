@@ -39,13 +39,14 @@ public class PalindromeStringOrNot {
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the string to check : ");
-        String input = sc.nextLine();
-        if (isPalindrome(input, 0, input.length() - 1)) {
-            System.out.println("it's palindrome");
-        } else {
-            System.out.println("it's not palindrome ");
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("Enter the string to check : ");
+            String input = sc.nextLine();
+            if (isPalindrome(input, 0, input.length() - 1)) {
+                System.out.println("it's palindrome");
+            } else {
+                System.out.println("it's not palindrome ");
+            }
         }
     }
 }

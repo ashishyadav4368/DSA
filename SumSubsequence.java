@@ -29,3 +29,43 @@ public class SumSubsequence {
 
     }
 }
+
+// this is the program where we will return the first subsequence when we get,
+// we will not print all the subsequence but return only one
+
+// import java.util.*;
+
+// public class OneSubsequenceSumK {
+
+// static boolean findSubsequence(int[] arr, int index, List<Integer> current,
+// int sum, int k) {
+// // base case
+// if (index == arr.length) {
+// if (sum == k) {
+// System.out.println("One subsequence: " + current);
+// return true; // ✅ found one, stop here
+// }
+// return false; // ❌ not valid, keep searching
+// }
+
+// // include arr[index]
+// current.add(arr[index]);
+// if (findSubsequence(arr, index + 1, current, sum + arr[index], k)) {
+// return true; // 🚀 if found in this branch, stop searching
+// }
+// current.remove(current.size() - 1); // backtrack
+
+// // exclude arr[index]
+// if (findSubsequence(arr, index + 1, current, sum, k)) {
+// return true;
+// }
+
+// return false; // neither include nor exclude worked
+// }
+
+// public static void main(String[] args) {
+// int[] arr = { 1, 2, 1 };
+// int k = 2;
+// findSubsequence(arr, 0, new ArrayList<>(), 0, k);
+// }
+// }
